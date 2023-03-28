@@ -1,0 +1,40 @@
+.card {
+    width: 300px;
+    height: 300px;
+    border: solid 5px;
+}
+
+.title1 {
+    color: black;
+    font-size: 10px;
+}
+
+.title2 {
+    color: black;
+    font-size: 10px;
+}
+
+.titles {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.buttonSave {
+    background-color: black;
+    color: white;
+
+}
+
+.buttons {
+    margin: 80px;
+    display: block;
+
+}
+
+.divButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonClose {}
+

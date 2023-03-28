@@ -1,0 +1,29 @@
+<button (click)="logout()">Logout</button>
+<!-- <div class="container">
+    <ul class="image-gallery">
+        <li *ngIf="photos$ | async; let photos">
+            <img *ngFor="let photo of photos" [src]="photo.download_url" alt="">
+            <div class="overlay"><button mat-button (click)="openDialog()">ADD TO ALBUM</button></div>
+        </li>
+    </ul>
+</div> -->
+
+<!-- <div class="photos">
+    <div class="container">
+        <div *ngIf="photos$ | async; let photos" class="image-galery">
+            <img *ngFor="let photo of photos" [src]="photo.download_url" alt="" class="image">
+
+        </div>
+
+    </div>
+</div> -->
+<!-- <button (click)="openModal()">Open Modal</button> -->
+
+<div class="grid-wrapper" *ngIf="photos$ | async; let photos">
+    <div *ngFor="let photo of photos" class="mydivoutermulti">
+        <img [src]="photo.download_url" alt="">
+        <!-- <button class="add-photo" mat-button (click)="openDialog()">ADD TO ALBUM</button> -->
+        <div class="add-photo" (click)="openDialog()">ADD TO ALBUM</div>
+        <div class="details" (click)="openDialogDetails()">Details</div>
+    </div>
+</div>

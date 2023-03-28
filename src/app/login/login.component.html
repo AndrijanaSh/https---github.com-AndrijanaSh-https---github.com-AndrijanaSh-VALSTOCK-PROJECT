@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1>Join our stock community!</h1>
+        <br>
+        <h4>Download free photos and videos powered by the best photographers.</h4>
+        <label class="credentials">username</label>
+        <div class="form-group">
+            <input type="text" formControlName="username" class="form-control email"
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Email is required</div>
+                <div *ngIf="f.username.errors.username">Email must be a valid email address</div>
+            </div>
+        </div>
+        <label class="credentials">password</label>
+        <div class="form-group">
+            <input type="text" formControlName="password" class="form-control password"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="submitButton">LOG IN</button>
+        </div>
+    </form>
+    <footer class="background">
+        <div>
+            <img src="/assets/image1.png" width="443px" height="300px" alt="image">
+        </div>
+    </footer>
+</div>
